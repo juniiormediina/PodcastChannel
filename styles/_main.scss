@@ -1,0 +1,200 @@
+/* botones */
+.btn{
+    width: 100%;
+    height: 56px;
+    background: #00F3BB;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 33px;
+    font-weight: 700;
+    overflow: hidden;
+    &:hover{
+        background-image: linear-gradient(to left, #0000FE, #00F0B8);
+    }
+}
+
+iframe{
+    width: 100%;
+    height: 232px;
+    border: 0;
+    background: rgba(0,0,0,0);
+}
+
+main{
+
+    /* description */
+    .description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .description-text{
+            width: 35%;
+            margin: 7vw 18vh 3rem;
+            h1{
+                font-size: 41px;
+                margin-bottom: 10px;
+                margin-left: 3px;                
+                .world{
+                    text-decoration: line-through;
+                }
+                .dot{
+                    color: #0000EC;
+                }
+            }
+            p{
+                max-width: 537px;
+                font-size: 14px;
+            }
+        }
+        .btn-align-description{
+            margin: 0px 0px 4rem 18vh;
+        }
+    }
+
+    /* Episodes */
+    .episodes{
+        position: relative;
+        height: 1000px;
+        z-index: 0;
+        
+        .svg { 
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            background-image: linear-gradient(#0000FF, #0000A3);
+            transform: skewY(-6deg);
+            transform-origin: bottom left;  
+        }
+        h2{
+            position: relative;
+            color: #ffffff;
+            font-size: 41px;
+            margin: 5rem 101rem  3rem 18vh;
+            padding-top: 30px;
+        }
+        .episodes-iframes{
+
+            width: 100%;
+            height: 620px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-items: center;
+            .iframes{
+                position: relative;
+                overflow: hidden;
+                width: 600px;
+            }
+            
+        }
+    }
+
+    /* where we come from */
+    .where{
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        z-index: 1;
+    
+        .where-phone{
+            display: flex;
+            img{
+                margin-top: -220px;
+                z-index: 1;
+            }
+        }
+        .where-text{
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            div{
+                h2{
+                    font-size: 41px;
+                }
+                p{
+                    max-width: 500px;
+                }
+            }
+        }
+        
+    }
+
+    /* stellar */
+    .stellar{
+        h2{
+            font-size: 41px;
+            margin: 5rem 73rem 3rem 18vh;
+        }
+        .stellar-images{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            div img{
+                width: 500px;
+            }
+        }
+    }
+
+    /* Themes */
+    .themes{
+        h2{
+            font-size: 41px;
+            margin: 5rem 69rem 3rem 18vh;
+        }
+        .themes-images{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            div{
+                text-align: center;
+                height: 250px;
+                width: 250px;
+                img{
+                    padding-bottom: 20px;
+                }
+                p{
+                    max-width: 180px;
+                    margin: auto;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    /* news */
+    .news{
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+        .news-svg-last{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#0000FF, #0000A3);
+            transform: skewY(-6deg);
+            transform-origin: bottom right;
+        }
+        .news-align-text{
+            position: relative;
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+            margin: 14rem 0 3rem 0vh;
+        }
+        .news-align-btn{
+            position: relative;
+            text-align: center;
+        }
+    }
+}
