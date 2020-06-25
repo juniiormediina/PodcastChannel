@@ -5,6 +5,7 @@
     align-content: center;
     justify-content: center; */
     justify-content: space-evenly;
+    flex-flow: column;
     .footer-copy{
         padding: 10px;
         font-size: 16px;
@@ -17,6 +18,7 @@
         }
         i{
             padding: 10px;
+            margin-right: 16px;
             line-height: 28px;
         }
     }
