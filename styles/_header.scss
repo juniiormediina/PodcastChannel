@@ -42,6 +42,7 @@
             }
         }
     }
+
     .menu-icon{
         position: relative;
         padding: 26px 10px;
@@ -79,6 +80,7 @@
     .menu-btn{
         position: absolute;
         top: -100px;
+
         &:focus ~ .menu-icon{
             .menu-icon-line{
                 &::before{
@@ -93,21 +95,8 @@
 
     .menu-icon{
         display: block;
-
-        &-line{
-            animation: closedMid 0.8s backwards;
-            animation-direction: reverse;
-
-            &::before{
-                animation: ClosedTop 0.8s backwards;
-                animation-direction: reverse;
-            }
-            &::after{
-                animation: ClosedBtm 0.8s backwards;
-                animation-direction: reverse;
-            }
-        }
     }
+
     .nav-links{
         position: absolute;
         top: 0;
@@ -138,9 +127,11 @@
             }
         }
     }
+
     .menu-btn:checked ~ .nav-links{
         opacity: 1;
         clip-path: circle(100% at center);
+
         .nav-link{
             opacity: 1;
             transform: translateX(0);
@@ -164,7 +155,6 @@
     }
 
     .menu-btn:checked  ~ .menu-icon{
-
         border-radius: 50%;
         animation: pulse 1s;
 

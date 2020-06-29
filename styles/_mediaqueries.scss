@@ -1,9 +1,15 @@
 /* Tablet */
 @media screen and (min-width: 768px) {
+    
+    /* Adaptacion del Botón */
     .btn{
         padding: 15px 7%;
     }
+
+    /* Main */
     .main{
+
+        /* Description */
         .description{
             margin: 6vw 4vh 3rem 6rem;
             .description-text{
@@ -19,6 +25,8 @@
                 text-align: inherit;
             }
         }
+
+        /* Episodes */
         .episodes{
             height: 830px;
             .episodes-iframes{
@@ -27,11 +35,14 @@
                 justify-content: space-around;
             }
         }
+
+        /* News */
         .news{
             height: 280px;
         }
     }
 
+    /* Footer */
     .footer{
         flex-flow: row nowrap;
         align-content: center;
@@ -41,14 +52,16 @@
 }
 /* Escritorio */
 @media screen and (min-width: 1024px){
+
+    /* header */
     .header{
         color: #000000;
         transition: unset;
-        width: 85vw;
+        width: 80vw;
+
         .menu-icon{
             display: none;
         }
-        
         .nav-links{
             top: unset;
             left: unset;
@@ -62,8 +75,7 @@
             background: unset;
             transition: unset;
             clip-path: unset;
-            
-            
+            margin-left: 0;
             .nav-link{
                 opacity: 1;
                 transform: translateX(0%);
@@ -74,12 +86,22 @@
                     margin: .2rem;
                     padding: 1rem .5rem;
                 }
+                a:hover{
+                    color: #00F3BB;
+                    text-decoration: line-through;
+                }
+                &:active {
+                    color: rgba(6 ,10 ,36 , 0.56);
+                    text-decoration: line-through;
+                }
             }
         }
-        
-
     }
+
+    /* Main */
     .main{
+
+        /* Description */
         .description{
             .description-text{
                 margin: 6vw 4vh 3rem 9rem;
@@ -95,19 +117,25 @@
                 margin: 0px 0px 6rem 15vh;
             }
         }
+
+        /* Episodes */
         .episodes{
-            height: 1260px;
+            height: 1042px;
             h2{
                 font-size: 48px;
                 margin: 6vw 4vh 3rem 15rem;
             }
             .episodes-iframes{
+                width: 1440px;
+                height: 670px;
+                margin: auto;   
                 .iframes{
                     width: 584px;
                 }
             }
-
         }
+
+        /* where */
         .where{
             .where-phone{
                 img{
@@ -126,18 +154,24 @@
                 }
             }
         }
+
+        /* Stellar */
         .stellar{
             h2{
                 margin: 6vw 4vh 3rem 15rem;
                 font-size: 48px;
             }
             .stellar-images{
+                width: 1440px;
+                margin: auto;
                 div img{
                     width: 480px;
                     height: 364px;
                 }
             }
         }
+
+        /* Themes */
         .themes{
             h2{
                 margin: 6vw 4vh 3rem 15rem;
@@ -147,6 +181,8 @@
                 flex-flow: row nowrap;
             }
         }
+
+        /* News */
         .news{
             height: 518px;
             .news-align-text{
@@ -157,6 +193,8 @@
             }
         }
     }
+
+    /* Footer */
     .footer{
         justify-content: space-between;
     }

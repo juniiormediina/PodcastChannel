@@ -1,3 +1,4 @@
+/* Efecto de un pulso que se expandes antes del mostrar todo el menu */
 @keyframes pulse{
     from{
         box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
@@ -8,10 +9,9 @@
         background: rgba(255, 255, 255, 0);
     }
 }
-/* animacion de apertura y cierre del menu burger */
+
+/* animacion de apertura para el menu burger */
 /* TOP */
-/* hay que verificar bien el codigo del closed */
-/* no esta funcionando correctamente */
 @keyframes openTop{
     0%{
         transform: translateY(-5px)
@@ -26,20 +26,7 @@
         rotate(90deg);
     }
 }
-/* @keyframes closedTop{
-    0%{
-        transform: translateY(-5px)
-        rotate(0deg);
-    }
-    50%{
-        transform: translateY(0px)
-        rotate(0deg);
-    }
-    100%{
-        transform: translateY(0px)
-        rotate(90deg);
-    }
-} */
+
 /* MID */
 @keyframes openMid{
     50%{
@@ -49,14 +36,7 @@
         transform: rotate(45deg);
     }
 }
-/* @keyframes closedMid{
-    50%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(45deg);
-    }
-} */
+
 /* BTM */
 @keyframes openBtm{
     0%{
@@ -72,17 +52,3 @@
         rotate(90deg);
     }
 }
-/* @keyframes closedBtm{
-    0%{
-        transform: translateY(5px)
-        rotate(0deg);
-    }
-    50%{
-        transform: translateY(0px)
-        rotate(0deg);
-    }
-    100%{
-        transform: translateY(0px)
-        rotate(90deg);
-    }
-} */

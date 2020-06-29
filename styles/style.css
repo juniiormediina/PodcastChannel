@@ -1,11 +1,39 @@
+@charset "UTF-8";
 /* all body */
 /* header */
+/* Estilos generales para la página */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Mono", monospace;
+}
+
+/* Estilos generales para los iframes */
+iframe {
+  width: 100%;
+  height: 232px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Estilo general para los botones */
+.btn {
+  width: 100%;
+  height: 56px;
+  background: #00F3BB;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 17px 27%;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
+  background-image: linear-gradient(to left, #0000FE, #00F0B8);
 }
 
 .header {
@@ -131,24 +159,6 @@
   display: block;
 }
 
-.header .menu-icon-line {
-  -webkit-animation: closedMid 0.8s backwards;
-          animation: closedMid 0.8s backwards;
-  animation-direction: reverse;
-}
-
-.header .menu-icon-line::before {
-  -webkit-animation: ClosedTop 0.8s backwards;
-          animation: ClosedTop 0.8s backwards;
-  animation-direction: reverse;
-}
-
-.header .menu-icon-line::after {
-  -webkit-animation: ClosedBtm 0.8s backwards;
-          animation: ClosedBtm 0.8s backwards;
-  animation-direction: reverse;
-}
-
 .header .nav-links {
   position: absolute;
   top: 0;
@@ -251,6 +261,7 @@
           animation: openBtm 0.8s forwards;
 }
 
+/* Efecto de un pulso que se expandes antes del mostrar todo el menu */
 @-webkit-keyframes pulse {
   from {
     -webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
@@ -263,7 +274,6 @@
     background: rgba(255, 255, 255, 0);
   }
 }
-
 @keyframes pulse {
   from {
     -webkit-box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
@@ -277,10 +287,8 @@
   }
 }
 
-/* animacion de apertura y cierre del menu burger */
+/* animacion de apertura para el menu burger */
 /* TOP */
-/* hay que verificar bien el codigo del closed */
-/* no esta funcionando correctamente */
 @-webkit-keyframes openTop {
   0% {
     -webkit-transform: translateY(-5px) rotate(0deg);
@@ -310,20 +318,6 @@
   }
 }
 
-/* @keyframes closedTop{
-    0%{
-        transform: translateY(-5px)
-        rotate(0deg);
-    }
-    50%{
-        transform: translateY(0px)
-        rotate(0deg);
-    }
-    100%{
-        transform: translateY(0px)
-        rotate(90deg);
-    }
-} */
 /* MID */
 @-webkit-keyframes openMid {
   50% {
@@ -346,14 +340,6 @@
   }
 }
 
-/* @keyframes closedMid{
-    50%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(45deg);
-    }
-} */
 /* BTM */
 @-webkit-keyframes openBtm {
   0% {
@@ -384,43 +370,14 @@
   }
 }
 
-/* @keyframes closedBtm{
-    0%{
-        transform: translateY(5px)
-        rotate(0deg);
-    }
-    50%{
-        transform: translateY(0px)
-        rotate(0deg);
-    }
-    100%{
-        transform: translateY(0px)
-        rotate(90deg);
-    }
-} */
-.btn {
-  width: 100%;
-  height: 56px;
-  background: #00F3BB;
-  color: #000000;
-  text-transform: uppercase;
-  text-decoration: none;
-  /* padding: 13px 33px; */
-  padding: 17px 27%;
-  font-weight: 700;
-  overflow: hidden;
-}
-
-.btn:hover {
-  background-image: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
-  background-image: linear-gradient(to left, #0000FE, #00F0B8);
-}
-
-iframe {
-  width: 100%;
-  height: 232px;
-  border: 0;
-  background: rgba(0, 0, 0, 0);
+/* Main */
+.main {
+  /* Description */
+  /* Episodes */
+  /* Where */
+  /* Stellar */
+  /* Themes */
+  /* News */
 }
 
 .main .description {
@@ -492,7 +449,7 @@ iframe {
 }
 
 .main .episodes .episodes-iframes {
-  width: 100%;
+  width: auto;
   height: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -727,8 +684,15 @@ iframe {
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+  /* Adaptacion del Botón */
   .btn {
     padding: 15px 7%;
+  }
+  /* Main */
+  .main {
+    /* Description */
+    /* Episodes */
+    /* News */
   }
   .main .description {
     margin: 6vw 4vh 3rem 6rem;
@@ -758,6 +722,7 @@ iframe {
   .main .news {
     height: 280px;
   }
+  /* Footer */
   .footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -775,11 +740,12 @@ iframe {
 
 /* Escritorio */
 @media screen and (min-width: 1024px) {
+  /* header */
   .header {
     color: #000000;
     -webkit-transition: unset;
     transition: unset;
-    width: 85vw;
+    width: 80vw;
   }
   .header .menu-icon {
     display: none;
@@ -802,6 +768,7 @@ iframe {
     transition: unset;
     -webkit-clip-path: unset;
             clip-path: unset;
+    margin-left: 0;
   }
   .header .nav-links .nav-link {
     opacity: 1;
@@ -815,6 +782,23 @@ iframe {
     display: unset;
     margin: .2rem;
     padding: 1rem .5rem;
+  }
+  .header .nav-links .nav-link a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  .header .nav-links .nav-link:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+  }
+  /* Main */
+  .main {
+    /* Description */
+    /* Episodes */
+    /* where */
+    /* Stellar */
+    /* Themes */
+    /* News */
   }
   .main .description .description-text {
     margin: 6vw 4vh 3rem 9rem;
@@ -832,11 +816,16 @@ iframe {
     margin: 0px 0px 6rem 15vh;
   }
   .main .episodes {
-    height: 1260px;
+    height: 1042px;
   }
   .main .episodes h2 {
     font-size: 48px;
     margin: 6vw 4vh 3rem 15rem;
+  }
+  .main .episodes .episodes-iframes {
+    width: 1440px;
+    height: 670px;
+    margin: auto;
   }
   .main .episodes .episodes-iframes .iframes {
     width: 584px;
@@ -856,6 +845,10 @@ iframe {
   .main .stellar h2 {
     margin: 6vw 4vh 3rem 15rem;
     font-size: 48px;
+  }
+  .main .stellar .stellar-images {
+    width: 1440px;
+    margin: auto;
   }
   .main .stellar .stellar-images div img {
     width: 480px;
@@ -880,6 +873,7 @@ iframe {
   .main .news .news-align-text h2 {
     font-size: 48px;
   }
+  /* Footer */
   .footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
