@@ -6,6 +6,16 @@
         padding: 15px 7%;
     }
 
+    /* header */
+    .header{
+        justify-content: space-between;
+        padding: 0 10vw;
+        .nav-links{
+            align-items: center;
+            height: 100vh;
+        }
+    }
+
     /* Main */
     .main{
 
@@ -31,7 +41,7 @@
             height: 830px;
             .episodes-iframes{
                 height: 550px;
-                flex-flow: row wrap;
+                /* flex-flow: row wrap; */
                 justify-content: space-around;
             }
         }
@@ -50,23 +60,22 @@
         justify-content: space-around;
     }
 }
-/* Escritorio */
+/* Laptop */
 @media screen and (min-width: 1024px){
 
     /* header */
     .header{
-        color: #000000;
+        color: $font-color-black;
         transition: unset;
-        width: 80vw;
 
-        .menu-icon{
+        .menu-icon, .menu-btn{
             display: none;
         }
         .nav-links{
             top: unset;
             left: unset;
             opacity: 1;
-            flex-direction: row;
+            display: contents;
             padding: unset;
             width: unset;
             height: unset;
@@ -81,13 +90,14 @@
                 transform: translateX(0%);
                 text-align: unset;
                 transition: unset;
+                display: contents;
                 a{
                     display: unset;
                     margin: .2rem;
                     padding: 1rem .5rem;
                 }
                 a:hover{
-                    color: #00F3BB;
+                    color: $font-color-aqua;
                     text-decoration: line-through;
                 }
                 &:active {
@@ -97,6 +107,48 @@
             }
         }
     }
+
+    /* Episodes */
+    .episodes{
+        height: 1042px;
+        h2{
+            font-size: 48px;
+            margin: 6vw 4vh 3rem 15rem;
+        }
+        .episodes-iframes{
+            width: auto;
+            height: 670px;
+            margin: auto;   
+            .iframes{
+                width: 584px;
+            }
+        }
+    }
+
+    /* Stellar */
+    .stellar{
+        h2{
+            margin: 6vw 4vh 3rem 15rem;
+            font-size: 48px;
+        }
+        .stellar-images{
+            width: auto;
+            margin: auto;
+            div img{
+                width: 346px;
+                height: 300px;
+            }
+        }
+    }
+
+    /* Footer */
+    .footer{
+        justify-content: space-between;
+    }
+}
+
+/* Laptop L */
+@media screen and (min-width: 1440px){
 
     /* Main */
     .main{
@@ -109,7 +161,7 @@
                     max-width: fit-content;
                     font-size: 64px;
                     .dot{
-                        color: #0000EC;
+                        color: $font-color-blue;
                     }
                 } 
             }
@@ -126,7 +178,7 @@
                 margin: 6vw 4vh 3rem 15rem;
             }
             .episodes-iframes{
-                width: 1440px;
+                width: auto;
                 height: 670px;
                 margin: auto;   
                 .iframes{
@@ -134,6 +186,7 @@
                 }
             }
         }
+        
 
         /* where */
         .where{
@@ -146,7 +199,7 @@
             }
             .where-text{
                 /* verificar que tanto afecta la separacion de la imagen */
-                margin: 3vw 0vh 7rem -29rem;
+                margin: 3vw 0vh 7rem -11rem;
                 div{
                     h2{
                         font-size: 48px;
@@ -158,15 +211,15 @@
         /* Stellar */
         .stellar{
             h2{
-                margin: 6vw 4vh 3rem 15rem;
                 font-size: 48px;
+                margin: 6vw 4vh 3rem 15rem;
             }
             .stellar-images{
-                width: 1440px;
-                margin: auto;
+    
                 div img{
-                    width: 480px;
-                    height: 364px;
+                    margin: -3px;
+                    width: 482px;
+                    height: 385px;
                 }
             }
         }
@@ -192,10 +245,5 @@
                 }
             }
         }
-    }
-
-    /* Footer */
-    .footer{
-        justify-content: space-between;
     }
 }

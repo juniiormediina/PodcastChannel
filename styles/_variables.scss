@@ -1,4 +1,45 @@
-/* all body */
+/* IBM Plex Sans */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+/* IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+$font-titles: 'IBM Plex Sans', sans-serif;
 $font: 'IBM Plex Mono', monospace;
 
-/* header */
+/* Color del bg de las secciones de episodes y news */
+$bg-img: linear-gradient(#0000FF, #0000A3);
+
+/* Color del bg de las secciones de episodes y news */
+$bg-img-btn: linear-gradient(to left, #0000FE, #00F0B8);
+
+/* Color para letras */
+$font-color-black: #000000;
+$font-color-white: #ffffff;
+$font-color-blue: #0000EC;
+$font-color-aqua: #00F3BB;
+
+/* Estilos generales para los iframes */
+iframe{
+    width: 100%;
+    height: 232px;
+    border: 0;
+    background: rgba(0,0,0,0);
+}
+
+/* Estilo general para los botones */
+.btn{
+    width: 100%;
+    height: 56px;
+    background: $font-color-aqua;
+    color: $font-color-black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 17px 27%;
+    font-weight: 700;
+    overflow: hidden;
+
+    &:hover{
+        background-image: $bg-img-btn;
+    }
+}
