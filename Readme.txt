@@ -1,1 +1,1 @@
-http://podcastchanneljrm.atwebpages.com/
+https://juniiormediina.github.io/PodcastChannel/.
